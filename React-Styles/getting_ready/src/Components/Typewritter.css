@@ -1,0 +1,23 @@
+.typewritter_container {
+    height: 100vh;
+    text-align: center;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+}
+
+.typewritter_text {
+    animation: typewritter 5s forwards;
+    overflow: hidden;
+    /* keeps in a single line */
+    white-space: nowrap;
+}
+
+@keyframes typewritter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

@@ -1,0 +1,50 @@
+.ThreeD_whole_container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: #0a5ca8;
+    perspective: 1000px; /* Move perspective here */
+}
+
+.ThreeD_container {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    left: calc(50% - 100px);
+    top: 20%;
+    transform-style: preserve-3d;
+    transform-origin: center center; /* Ensure rotation is around the center */
+    animation: rotator 20s linear infinite;
+    transform: rotateX(-45deg);
+}
+
+@keyframes rotator {
+    from {
+        transform: rotateX(-20deg) rotateY(0deg) ;
+    }
+    to {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+
+.ThreeD_imgs {
+    position: absolute;
+    inset: 0;
+    transform-origin: center center; /* Rotate each image relative to container's center */
+    transform: rotateY(calc((360deg / 6) * var(--id))) translateZ(550px); /* Space out in circle */
+}
+
+.ThreeD_imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ThreeD_bg img{
+    height: 60vh;
+    position: relative;
+    top: 40vh;
+    z-index: -1;
+}

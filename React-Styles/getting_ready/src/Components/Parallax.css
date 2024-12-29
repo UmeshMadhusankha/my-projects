@@ -1,0 +1,161 @@
+.parallax {
+    display: grid;
+    grid-template-areas: 'items';
+    background-color: rgb(241, 99, 99);
+    position: relative;
+    z-index: 0;
+}
+
+.parallax > * {
+    grid-area: items;
+    animation: base;
+    animation-timeline: scroll();
+}
+
+.cloud-front {
+    z-index: 3;
+    width: 25vw;
+    transform: translate(60vw,30vw);
+    --endWidth: 35vw;
+    --endX: 85vw;
+    --endY: 20vw;
+
+    /*
+    animation: cloud-front;
+    animation-timeline: scroll();
+    */
+}
+
+.cloud-back {
+    z-index: 1;
+    width: 30vw;
+    transform: translate(25vw,10vw);
+    --endWidth: 45vw;
+    --endX: 35vw;
+    --endY: 35vw;
+
+    /*
+    animation: cloud-back;
+    animation-timeline: scroll();
+    */
+}
+
+.sun {
+    z-index: 2;
+    width: 20vw;
+    transform: translate(55vw,35vw);
+    --endWidth: 35vw;
+    --endX: 45vw;
+    --endY: 40vw;
+
+    /*
+    animation: sun;
+    animation-timeline: scroll();
+    */
+}
+
+.mountain1 {
+    z-index: 4;
+    width: 110vw;
+    transform: translate(-20vw,25vw);
+    --endWidth: 145vw;
+    --endX: -45vw;
+    --endY: 45vw;
+
+    /*
+    animation: mountain1;
+    animation-timeline: scroll();
+    */
+}
+
+.mountain2 {
+    z-index: 5;
+    width: 66vw;
+    transform: translate(50vw,25vw);
+    --endWidth: 100vw;
+    --endX: 50vw;
+    --endY: 35vw;
+
+    /*
+    animation: mountain2;
+    animation-timeline: scroll();
+    */
+}
+
+.treeline {
+    z-index: 6;
+    transform: translate(-5vw,0vw);
+    width: 120vw;
+    --endWidth: 175vw;
+    --endX: -30vw;
+    --endY: 0vw;
+
+    /*
+    animation: treeline;
+    animation-timeline: scroll();
+    */
+}
+
+/* animating */
+@keyframes base {
+    to {
+        width: var(--endWidth);
+        transform: translate(var(--endX),var(--endY));
+    }
+}
+
+/*
+@keyframes treeline {
+    to {
+        width: 175vw;
+        transform: translate(-30vw);
+    }
+}
+
+@keyframes mountain1 {
+    to {
+        width: 135vw;
+        transform: translate(-45vw,45vw);
+    }
+}
+
+@keyframes mountain2 {
+    to {
+        width: 100vw;
+        transform: translate(50vw,35vw);
+    }
+}
+
+@keyframes sun {
+    to {
+        width: 35vw;
+        transform: translate(45vw,40vw);
+    }
+}
+
+@keyframes cloud-front {
+    to {
+        width: 35vw;
+        transform: translate(85vw,20vw);
+    }
+}
+
+@keyframes cloud-back {
+    to {
+        width: 45vw;
+        transform: translate(35vw,35vw);
+    }
+}
+*/
+
+/* some optimizations */
+.container {
+    height: 110vw;
+    background-color: aqua;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }

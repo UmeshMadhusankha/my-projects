@@ -1,0 +1,72 @@
+.bucket {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.type1 {
+    width: 20vw;
+    height: 35vh;
+    background-color: aqua;
+    margin: 5vw;
+    animation-name: normal;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes normal {
+    from {
+        opacity: 0.5;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.type2 {
+    width: 20vw;
+    height: 35vh;
+    border: 1px solid white;
+    background-color: rgb(255, 60, 0);
+    margin: 5vw;
+    animation: sideways linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes sideways {
+    from {
+        opacity: 0.5;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.type3 {
+    width: 20vw;
+    height: 35vh;
+    border: 1px solid white;
+    background-color: rgb(15, 201, 15);
+    margin: 5vw;
+    animation: grow linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes grow {
+    from {
+        opacity: 0.5;
+        clip-path: inset(100% 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}

@@ -1,0 +1,36 @@
+.conic_container{
+    height: 95vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blob_container {
+    width: 600px;
+    height: 450px;
+    border-radius: 1000px;
+    background-color: #FF2929;
+    filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+}
+.blob {
+    position: absolute;
+    left: -150px;
+    bottom: -225px;
+    background-image: conic-gradient(from 0deg,#FCF596,#F6D6D6,#A1EEBD,#7BD3EA,#FF9C73,#3D3BF3,#FF2929);
+    background-size: contain;
+    margin: auto;
+    width: 150%;
+    height: 200%;
+    animation: conic 20s linear infinite;
+}
+
+@keyframes conic{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
